@@ -1,9 +1,6 @@
-<%= form_tag articles_path do %>
-  <label>Article title:</label><br>
-  <%= text_field_tag :title %><br>
-
-  <label>Article Description</label><br>
-  <%= text_area_tag :description %><br>
-
-  <%= submit_tag "Submit Article" %>
+<h1> Add an Article </h1>
+<%= form_for @article do |f| %>
+    Title: <%= f.text_field 'title' %>
+    Description: <%= f.text_field 'description' %>
+    <%= f.submit %>
 <% end %>
